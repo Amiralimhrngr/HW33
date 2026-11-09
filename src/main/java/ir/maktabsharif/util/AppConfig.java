@@ -12,6 +12,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class AppConfig {
     @Bean
     public InternalResourceViewResolver resolver() {
-        return new InternalResourceViewResolver("/WEB INF/views/", ".jsp");
+        return new InternalResourceViewResolver("/WEB-INF/views/", ".jsp");
     }
 }

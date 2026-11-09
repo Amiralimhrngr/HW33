@@ -32,7 +32,7 @@ public class SessionController {
     }
 
     @GetMapping("/detail")
-    public String detail(@RequestParam Long id, Model model) {
+    public String detail(@RequestParam("id") Long id, Model model) {
         StudySession session = sessionService.findById(id);
         if (Optional.ofNullable(session).isEmpty()) {
             return "redirect:/sessions";

@@ -6,7 +6,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?> @Nullable [] getRootConfigClasses() {
-        return new Class[]{AppConfig.class};
+        return null;
     }
 
     @Override
@@ -16,6 +16,6 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{};
+        return new String[]{"/"};
     }
 }

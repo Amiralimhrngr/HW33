@@ -47,4 +47,14 @@ public class StudySession{
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    @Override
+    public String toString() {
+        return "StudySession{" +
+                "id=" + id +
+                ", subjectId=" + subjectId +
+                ", minutes=" + minutes +
+                ", notes='" + notes + '\'' +
+                '}';
+    }
 }

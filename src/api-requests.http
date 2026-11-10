@@ -1,0 +1,27 @@
+# 1. List all sessions GET /sessions (expect 200
+GET http://localhost:8080/HW33_war_exploded/sessions
+###
+#2. View one session's details GET /sessions/detail?id=1 (expect 200)
+GET http://localhost:8080/HW33_war_exploded/sessions/detail?id=1
+###
+#3. View a non existent session GET /sessions/detail?id=999 (expect 302 redirect to /sessions)
+GET http://localhost:8080/HW33_war_exploded/sessions/detail?id=999
+###
+#4. Show the add form GET /sessions/add (expect 200)
+GET http://localhost:8080/HW33_war_exploded/sessions/add
+###
+#5. Add a session POST /sessions/save with subjectId , minutes , notes (expect 302 redirect to /sessions)
+POST http://localhost:8080/HW33_war_exploded/sessions/save
+Content-Type: application/x-www-form-urlencoded
+
+subjectId=1&minutes=45&notes=Review+Spring+MVC
+###
+#6. Verify the new session appears GET /sessions (expect 200 , new session in the list)
+GET http://localhost:8080/HW33_war_exploded/sessions
+###
+#7. List all subjects GET /subjects (expect 200)
+GET http://localhost:8080/HW33_war_exploded/subjects
+###
+# Status check
+GET http://localhost:8080/HW33_war_exploded/status
+# Expected: HTTP 200, custom header X Planner Version: 1.0, short body message
